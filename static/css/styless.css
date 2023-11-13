@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cantata+One&family=Inknut+Antiqua:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #323946;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+body {
+    top: 0;
+    background: var(--second-bg-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.home-content {
+    max-width: 60rem;
+    margin: 10%;
+    margin-top: 5%;
+}
+
+.home-content h1{
+    display: inline-block;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-color)
+}
+
+.home-content h3{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.home-sci {
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a i {
+    color: black;
+}
+
+.home-sci a:hover {
+    color: var(--bg-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* pagina alterar-senha */
+
+.card-header h1 {
+    margin-left: 100px;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.card-header h1 i {
+    margin-right: 20px;
+}
+
+.fomulario {
+    margin: 30px 0 0 100px;
+    font-size: 20px;
+}
+
+.fomulario input {
+    font-size: 20px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-group label{
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+.alterar {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inknut Antiqua', serif;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    background: linear-gradient(to right, rgb(0, 183, 255), rgb(178, 227, 250));
+    cursor: pointer;
+    box-shadow: 4px 3px 5px black;
+    padding: 5px;
+}
+
+.alterar:hover {
+    background: rgb(0, 183, 255);
+}
+
+/* pagina configurações */
+
+.opcoes {
+    margin-left: 80px;
+}
+
+.opcoes a {
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 24px;
+}
+
+.opcoes a:hover{
+    color: var(--main-color);
+}
+
+.opcoes a i {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* pagina profile */
+
+.deco {
+    width: 50%;
+    margin: 20px 0 0 100px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.deco form a {
+    color: var(--main-color);
+    margin: 10px;
+    text-decoration: underline;
+}
+
+/* pagina perfil-usuario */
+
+.card {
+    margin: 3% auto auto auto;
+    padding: 20px 0px 40px 40px;
+    width: 600px;
+    background: #081b29;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.card-header {
+    padding: 10px;
+    background: #202020;
+    margin-left: -10px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header span {
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.card-header span a {
+    color: white;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card-header span a:hover {
+    color: yellow;
+}
+
+.card-header span a i {
+    margin-left: 10px;
+}
+
+.card-header h3 {
+    color: white;
+    font-size: 40px;
+    align-items: center;
+}
+
+.span{
+    margin-top: 20px;
+}
+
+.span span {
+    font-size: 25px;
+    text-decoration: underline;
+    color: var(--main-color);
+    margin-left: 10px;
+}
+
+.divs{
+    margin-top: 20px;
+    color: white;
+}
+
+.about-img {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid transparent;
+    border-right: .2rem solid var(--main-color);
+    border-bottom: .2rem solid transparent;
+    border-left: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
+}
+
+/* pagina login */
+
+.login-screen {
+    font-size: 20px;
+    width: 300px;
+    background: linear-gradient(#1d4f70, #00abf0);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    align-items: center;
+    line-height: 50px;
+}
+
+
+.form input{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.form button{
+    font-family: 'Inknut Antiqua', serif;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    background: linear-gradient(to right, rgb(0, 183, 255), rgb(178, 227, 250));
+    cursor: pointer;
+}
+
+.form button:hover{
+    background: rgb(0, 183, 255);
+}
+
+.form a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+/* pagina registrar */
+
+.container{
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.container input {
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.div-botao{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container a{
+    color: black;
+    text-decoration: underline;
+}
+
+.container button{
+    font-family: 'Inknut Antiqua', serif;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    background: linear-gradient(to right, rgb(0, 183, 255), rgb(178, 227, 250));
+    cursor: pointer;
+}
+
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #00abf0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 5;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir>i {
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.css-ul {
+    height: 100%;
+    list-style-type: none;
+
+}
+
+.css-ul li.item-menu{
+    transition: .2s;
+}
+
+.css-ul li.ativo{
+    background-color: #00abf0
+    ;
+}
+
+.css-ul li.item-menu:hover{
+    background: #00abf0;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 7px;
+
+}
+
+/* pagina livros */
+
+.buscar {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscar input {
+    width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 22px;
+    border: none;
+    margin: 15px;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+
+#listaLivros {
+    display: block;
+    width: 90%;
+    list-style-type: none;
+    margin-left: 90px;
+}
+
+#listaLivros li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text-color);
+    padding: 12px;
+    border-top: 2px solid black;
+}
+
+.item-name {
+    margin-left: 15px;
+}
+
+#listaLivros li a:hover {
+    color: #00abf0;
+}
+
+.img-alinhar {
+    width: 300px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+
+.contact {
+    margin-left: 80px;
+    padding-bottom: 7rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    backdrop-filter: blur(30px);
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.btn {
+    background-color: var(--main-color);
+    cursor: pointer;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    box-shadow: 0 0 10px black;
+    transition: .2s;
+}
+
+.btn:hover{
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+
+
+@media(max-width: 1200px) {
+    html {
+        font-size: 80%;
+    }
+
+    .card {
+        margin: 4% auto 0 26%;
+    }
+
+    .contact form .input-box {
+        justify-content: center;
+    }
+
+    .contact form .input-field {
+        width: 40%;
+        margin: .8rem 2rem;
+    }
+
+    .contact form .textarea-field {
+        width: 60%;
+        margin: .8rem auto;
+    }
+}
+
+@media(max-width: 920px){
+    .card {
+        margin: 4% auto 0 22%;
+    }
+}
+
+@media(max-width: 820px) {
+    .card {
+        margin: 4% auto 0 18%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav.menu-lateral {
+        overflow: hidden;
+    }
+
+    .home-sci a {
+        border: .2rem solid black;
+    }
+
+    .home-sci a i {
+        color: black;
+    }
+
+    .home-content {
+        width: 50%;
+        margin-left: 100px;
+    }
+
+    .home-content h1 {
+        font-size: 60px;
+    }
+
+    .home-content h3 {
+        font-size: 35px;
+    }
+
+    .alinhamento-imagem {
+        margin-left: -25px;
+        margin-bottom: 60px;
+    }
+
+    .tes {
+        margin-left: 100px;
+    }
+
+    .img-alinhar {
+        width: 120px;
+    }
+
+    #listaLivros {
+        width: 80%;
+        margin-right: 50px;
+    }
+
+    #listaLivros li a {
+        font-size: 14px;
+    }
+
+    .buscar input {
+        width: 80%;
+    }
+
+    .config {
+        font-size: 14px;
+    }
+
+    .h3 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 350px;
+        margin: 4% auto 0 34%;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card img {
+        margin-left: 25px;
+    }
+
+    .about-img .circle-spin {
+        margin-left: 14px;
+    }
+
+    .nome {
+        font-size: 20px;
+        margin-left: -15px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card-header h1 {
+        font-size: 30px;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .span span {
+        font-size: 20px;
+        flex-direction: column;
+        text-align: center;
+        margin-left: -5px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+}
+
+@media(max-width: 592px) {
+    
+    .contact form .input-box {
+        display: grid;
+        width: 100%;
+    }
+
+    .contact form .input-field {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+
+    .contact form .textarea-field {
+        width: 70%;
+    }
+}
+
+@media(max-width: 530px) {
+    nav.menu-lateral {
+        overflow: hidden;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 25px;
+    }
+
+    .home-content p {
+        font-size: 17px;
+    }
+
+    .span h1{
+        font-size: 20px;
+    }
+
+    .deco button {
+        font-size: 15px;
+    }
+
+    .form-group input {
+        font-size: 15px;
+    }
+
+    .card {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card img {
+        margin-left: -7px;
+    }
+
+    .about-img .circle-spin {
+        margin-left: -2px;
+    }
+
+    .card-header span {
+        font-size: 20px;
+    }
+
+    .card-header span a {
+        font-size: 14px;
+    }
+
+
+    .nome {
+        font-size: 15px;
+        margin-left: -15px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .span span {
+        flex-direction: column;
+        text-align: center;
+        margin-left: -5px;
+    }
+
+}
+
+@media(max-width: 490px) {
+
+    .card-header h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .card-header span {
+        display: none;
+    }
+
+    .opcoes a{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 462px) {
+    nav.menu-lateral {
+        overflow: hidden;
+    }
+
+    .buscar input {
+        width: 70%;
+    }
+
+    .card {
+        margin: 4% auto 0 30%;
+    }
+
+    .span h1{
+        font-size: 20px;
+    }
+
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+
+    .contact form .textarea-field {
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 372px) {
+    nav.menu-lateral {
+        width: 60px;
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .home-content h1 {
+        text-align: center;
+    }
+
+    .home-content h3 {
+        text-align: center;
+    }
+
+    .home-content p {
+        text-align: center;
+    }
+
+    .buscar input {
+        margin-left: 60px;
+    }
+    
+    .card {
+        margin: 4% auto 0 22%;
+        width: 250px;
+    }
+
+    .card-header {
+        margin-left: -30px;
+    }
+
+    .card-header h1 {
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .span h1{
+        font-size: 20px;
+    }
+
+    .deco form {
+        margin-left: -10px;
+    }
+
+    .deco form input {
+        width: 130%;
+    }
+
+    .form-group input {
+        width: 90%;
+    }
+
+    .form-group .alterar {
+        width: 100px;
+    }
+
+    .opcoes{
+        margin-left: 60px;
+    }
+
+    .opcoes a{
+        font-size: 15px;
+        margin-left: -10px;
+    }
+
+    .deco form a {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 15px;
+        margin-left: -10px;
+    }
+
+    .card img {
+        margin-left: -30px;
+    }
+
+    .about-img .circle-spin {
+        margin-left: -16px;
+    }
+
+    .span span {
+        font-size: 15px;
+    }
+
+    .contact form .input-box {
+       width: 90%;
+    }
+
+    .contact form .textarea-field {
+        width: 90%;
+        margin-left: 0px;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%)rotate(360deg);
+    }
+}
