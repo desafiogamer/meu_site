@@ -1,0 +1,39 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/styless.css' %}">
+
+    <div class="card-header">
+        <h1><i class="bi bi-file-lock2"></i>Alterar senha</h1>
+    </div>
+    <div class="fomulario">
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{form_senha.old_password.errors}}
+                <label>Senha antiga: </label>
+                {{form_senha.old_password}}
+            </div>
+
+            <div class="form-group">
+                {{form_senha.new_password1.errors}}
+                    <label>Nova senha: </label>
+                {{form_senha.new_password1}}
+            </div>
+
+            <div class="form-group">
+                {{form_senha.new_password2.errors}}
+                <label>Confirmação de senha: </label>
+                {{form_senha.new_password2}}
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Alterar" class="alterar">
+            </div>
+        </form>
+    </div>
+{% endblock %}

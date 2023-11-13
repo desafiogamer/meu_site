@@ -1,0 +1,38 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section class="contact" id="contact">
+        <form id="contact-form" action="{% url 'send_email' %}" role="form" required>
+            {% csrf_token %}
+            <div class="input-box">
+                <div class="input-field">
+                    <input id="nome" type="text" name="nome" placeholder="Nome completo" required>
+                </div>
+    
+                <div class="input-field">
+                    <input id="email" type="email" name="email" placeholder="Endereço de email" required>
+                </div>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-field">
+                    <input id="telefone" type="text" name="telefone" placeholder="Numero de telefone" required>
+                </div>
+    
+                <div class="input-field">
+                    <input id="assunto_email" type="text" name="assunto_email" placeholder="Assunto do email" required>
+                </div>
+            </div>
+    
+            <div class="textarea-field">
+                <textarea name="assunto" id="assunto" cols="30" rows="10" placeholder="Sua menssagem" required></textarea>
+            </div>
+    
+            <div class="btns">
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+{% endblock %}

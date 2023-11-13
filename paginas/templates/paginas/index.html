@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/styless.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% block menu %}
+    <nav class="menu-lateral">
+        <ul class="css-ul">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div>
+            <li class="item-menu">
+                <a href="{% url 'index' %}">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="txt-link">Inicio</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="{% url 'livros' %}">
+                    <span class="icon"><i class="bi bi-pc-display"></i></span>
+                    <span class="txt-link">Peças</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="{% url 'perfil-usuario' %}">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="txt-link">Perfil</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="{% url 'config' %}">
+                    <span class="icon"><i class="bi bi-gear"></i></span>
+                    <span class="txt-link">Configurações</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="{% url 'logout' %}">
+                    <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                    <span class="txt-link">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block conteudo %}
+        
+        <div class="home-content">
+            <h1>João vitor</h1>
+            <h3>Projeto FullStack</h3>
+            <p>Olá, fiz esse site apenas para praticar minhas habilidades, neste site utilizei <strong>JAVASCRIPT, HTML, CSS, PYTHON, BOOTSTRAP</strong> (só fiz a aba de peças para treinar JavaScript).<span class="animate" style="--i:1;"></span></p>
+            <div class="home-sci">
+                <a href="https://github.com/desafiogamer" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-4a18b024a/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/joaozinxl_3/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    {% endblock %}
+    <script defer src="{% static 'js/meu-js.js' %}"></script>
+</body>
+
+</html>

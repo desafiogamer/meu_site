@@ -1,0 +1,16 @@
+{% extends 'paginas/index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+    <div class="card-header">
+        <h1><i class="bi bi-gear-fill"></i>Configurações</h1>
+    </div>
+    <div class="opcoes">
+        <a href="{% url 'profile-update' %}"><i class="bi bi-person"></i> Atualizar dados</a>
+        <hr>
+        <a href="{% url 'alterar_senha' %}"><i class="bi bi-file-lock"></i> Alterar senha</a>
+        <hr>
+        <a href="{% url 'entre-contato' %}"><i class="bi bi-envelope"></i>Entre em contato</a>
+    </div>
+{% endblock %}
